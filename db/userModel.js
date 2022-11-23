@@ -14,9 +14,6 @@ const UserSchema = new mongoose.Schema({
     required: [true, "Please provide a password!"],
     unique: false,
   },
-  billing_id:{
-    type: String,
-  }
 });
 
 // export UserSchema

@@ -38,35 +38,31 @@ app.post("/register", (request, response) => {
   bcrypt
     .hash(request.body.password, 10)
     .then(async(hashedPassword) => {
-      const customer = await stripe.customers.create({
-        "name":request.body.username,
-        "email": request.body.email
-      });
       const user = new User({
         email: request.body.email,
         username: request.body.username,
         password: hashedPassword,
-        billing_id: customer.id
       });
       user
         .save()
         .then((result) => {
           response.status(201).send({
             message: "User Created Successfully",
-            result,
+            res: result,
           });
         })
         .catch((error) => {
+          console.log(error);
           response.status(500).send({
             message: "Error creating user",
-            error,
+            err:error,
           });
         });
     })
     .catch((e) => {
       response.status(500).send({
         message: "Password was not hashed successfully",
-        e,
+        err: e,
       });
     });
 });
