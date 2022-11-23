@@ -25,6 +25,6 @@
 - The server runs on port 3000 <code>http://localhost:3000/</code>
 
 ## Thanks to Team Wolkus for The Opportunity
-- [Heroku Hosted App URL](https://movistapp.herokuapp.com/)
-- [Vercel Hosted App URL](https://wolkus-assignment-gamma.vercel.app/)
+- [Heroku Hosted App URL](https://movistapp.herokuapp.com/) (This link will not work Post 28/November/2022 Due to policy changes in Heroku's Free Plans )
+- [Vercel Hosted App URL](https://wolkus-assignment-gamma.vercel.app/) (Use This in That case)
 - [Github Repository](https://github.com/mainigautam/wolkus-assignment)
